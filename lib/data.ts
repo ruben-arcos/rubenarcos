@@ -2,6 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import myCertsImg from "@/public/myCerts.png"
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -61,6 +62,13 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "myCerts",
+    description:
+      "Application to save important documents such as certificates/licenses. This app will keep all your important documents safe and readily available anywhere",
+    tags: ["React", "AWS", "MySql Workbench", "Tailwind"],
+    imageUrl: myCertsImg,
+  },
   {
     title: "CorpComment",
     description:
