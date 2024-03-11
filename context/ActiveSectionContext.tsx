@@ -16,6 +16,9 @@ type ActiveSectionContextType = {
 export const ActiveSectionContext =
   createContext<ActiveSectionContextType | null>(null);
 
+// CONTEXT API
+// external system to keep track of the states
+//  this is used in the component files
 export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
