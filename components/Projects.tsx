@@ -1,25 +1,13 @@
 "use client";
-import React, { useEffect } from "react";
+
+import React from "react";
 import SectionHeading from "./SectionHeading";
 import { projectsData } from "@/lib/data";
 import Project from "./Project";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
-  // CONTEXT API
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  // useEffect synchronizes with the inView variable value
-  // inView tell us our current state, and this updates our external system (located in the active section context file)
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Projects");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView("Projects", 0.5);
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28">

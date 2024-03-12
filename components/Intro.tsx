@@ -1,28 +1,15 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
-  // CONTEXT API
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  // useEffect synchronizes with the inView variable value
-  // inView tell us our current state, and this updates our external system (located in the active section context file)
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView("Home", 0.5);
 
   return (
     <section
