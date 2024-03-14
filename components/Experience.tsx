@@ -8,6 +8,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
+import { inView } from "framer-motion";
 
 export default function Experience() {
   return (
