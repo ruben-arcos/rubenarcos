@@ -1,5 +1,10 @@
 import React from "react";
+import SectionHeading from "./SectionHeading";
 
-export default function contact() {
-  return <section id="contact">contact</section>;
+export default function Contact() {
+  return (
+    <section id="contact">
+      <SectionHeading>contact me</SectionHeading>
+    </section>
+  );
 }
