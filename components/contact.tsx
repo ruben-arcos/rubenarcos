@@ -4,7 +4,7 @@ import { FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section id="contact">
+    <section id="contact" className="mb-20 sm:mb-28 w-[min(100%,38rem)] ">
       <SectionHeading>contact me</SectionHeading>
       <p>
         please contact me directly at{" "}
@@ -15,7 +15,9 @@ export default function Contact() {
       <form>
         <input type="email" />
         <textarea />
-        <button type="submit">submit <FaPaperPlane /></button>
+        <button type="submit">
+          submit <FaPaperPlane />
+        </button>
       </form>
     </section>
   );
