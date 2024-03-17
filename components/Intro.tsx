@@ -14,7 +14,6 @@ export default function Intro() {
 
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-
   return (
     <section
       ref={ref}
@@ -81,8 +80,8 @@ export default function Intro() {
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
-            setActiveSection('Contact');
-            setTimeOfLastClick(Date.now())
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
           }}
         >
           Contact me here{" "}
@@ -90,7 +89,7 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group bg-white px-7 py-3  flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10 dark:bg-white/10"
+          className="group bg-white px-7 py-3  flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           href="/cv.pdf"
           download
         >
@@ -99,7 +98,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full ffocus:scale-[1.15] hover:scale-[1.15]  active:scale-105 transition cursor-pointe boder border-black/10"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full ffocus:scale-[1.15] hover:scale-[1.15]  active:scale-105 transition cursor-pointe borderBlack"
           href="https://www.linkedin.com/in/ruben-arcos/"
           target="_blank"
         >
@@ -107,7 +106,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointe boder border-black/10"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointe borderBlack"
           href="https://github.com/ruben-arcos"
           target="_blank"
         >
