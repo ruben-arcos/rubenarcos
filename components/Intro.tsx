@@ -28,7 +28,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/myPic3.png"
+              src="/myPic.png"
               alt="Ruben's portrait"
               width="128"
               height="128"
