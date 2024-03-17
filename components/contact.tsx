@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import SectionHeading from "./SectionHeading";
@@ -18,10 +17,10 @@ export default function Contact() {
 
       <form className="mt-10">
         <input
-          className="h-14 rounded-lg border border-black/10"
+          className="h-14 rounded-lg borderBlack"
           type="email"
         />
-        <textarea className="h-52 my-3 rounded-lg border border-black/10" />
+        <textarea className="h-52 my-3 rounded-lg borderBlack" />
         <button type="submit">
           submit <FaPaperPlane />
         </button>
