@@ -37,15 +37,23 @@ export default function Contact() {
         or through this form
       </p>
 
-      <form className="mt-10 flex flex-col">
+      <form className="mt-10 flex flex-col"
+      action={async (formData) => {
+        console.log(formData)
+      }}
+      >
         <input
           className="h-14 px-4 rounded-lg borderBlack"
           type="email"
           placeholder="Your email"
+          required
+          maxLength={500}
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4"
           placeholder="Your message"
+          required
+          maxLength={500}
         />
 
         <button
