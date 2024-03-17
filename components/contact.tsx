@@ -15,13 +15,13 @@ export default function Contact() {
         or through this form
       </p>
 
-      <form className="mt-10">
+      <form className="mt-10 flex flex-col">
         <input
           className="h-14 rounded-lg borderBlack"
           type="email"
         />
-        <textarea className="h-52 my-3 rounded-lg borderBlack" />
-        <button type="submit">
+        <textarea className="h-52 my-3 rounded-lg borderBlack p-4" />
+        <button type="submit" className="flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all">
           submit <FaPaperPlane />
         </button>
       </form>
