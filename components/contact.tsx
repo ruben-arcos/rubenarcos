@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Contact() {
-    const { ref } = useSectionInView("Contact");
+  const { ref } = useSectionInView("Contact");
 
   return (
     <motion.section
@@ -22,6 +22,9 @@ export default function Contact() {
       }}
       transition={{
         duration: 1,
+      }}
+      viewport={{
+        once: true,
       }}
     >
       <SectionHeading>contact me</SectionHeading>
