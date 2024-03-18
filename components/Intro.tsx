@@ -98,7 +98,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full ffocus:scale-[1.15] hover:scale-[1.15]  active:scale-105 transition cursor-pointe borderBlack"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full ffocus:scale-[1.15] hover:scale-[1.15]  active:scale-105 transition cursor-pointe borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/ruben-arcos/"
           target="_blank"
         >
@@ -106,7 +106,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointe borderBlack"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointe borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/ruben-arcos"
           target="_blank"
         >
