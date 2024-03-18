@@ -5,7 +5,6 @@ import ThemeSwitch from "@/components/ThemeSwitch";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
-import ThemeContexProvidert from "@/context/ThemeContext";
 import ThemeContexProvider from "@/context/ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
