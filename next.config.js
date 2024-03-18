@@ -1,15 +1,16 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
+
+const path = require('path');
+
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
-  },
-  experimental: {
-    serverActions: true,
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, './'),
+    };
+
+    return config;
   },
 };
 
