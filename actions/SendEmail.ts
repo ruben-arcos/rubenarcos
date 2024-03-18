@@ -1,6 +1,6 @@
 "use server";
 
-import { validateString } from "@/lib/utils";
+import { validateString, getErrorMessage } from "@/lib/utils";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -28,9 +28,12 @@ export const SendEmail = async (formData: FormData) => {
       to: "ruben.arcos06@gmail.com",
       subject: "Message from contact form",
       reply_to: senderEmail as string,
-      text: message as string,
+    //   text: message as string,
+    react: 
     });
   } catch (error: unknown) {
-    console.log(error);
+    return {
+      error: getErrorMessage(error),
+    };
   }
 };
