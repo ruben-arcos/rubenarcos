@@ -6,7 +6,7 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const SendEmail = async (formData: FormData) => {
-  const senderEmail = formData.get("email");
+  const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
 
   //   simple server-side validation
@@ -22,11 +22,15 @@ export const SendEmail = async (formData: FormData) => {
     };
   }
 
-  resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "ruben.arcos06@gmail.com",
-    subject: "Message from contact form",
-    reply_to: senderEmail,
-    text: message,
-  });
+  try {
+    await resend.emails.send({
+      from: "Contact Form <onboarding@resend.dev>",
+      to: "ruben.arcos06@gmail.com",
+      subject: "Message from contact form",
+      reply_to: senderEmail as string,
+      text: message as string,
+    });
+  } catch (error: unknown) {
+    console.log(error);
+  }
 };
